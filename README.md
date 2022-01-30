@@ -1,6 +1,6 @@
 # Blog
 
-A fishing blog with several articles. Education and portfolio project: [LINK]()
+A fishing blog with several articles. Education and portfolio project: [LINK](https://blog-app-kwv4jp94g-tomaszjarkowski.vercel.app/)
 
 ## General information :page_facing_up:
 
