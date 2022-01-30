@@ -1,0 +1,57 @@
+@import '_variables.scss';
+
+.title {
+	color: var(--title);
+	margin: 0 10px;
+}
+
+.single {
+	padding: 8px 16px;
+	background-color: var(--bgc);
+	display: block;
+	margin: 20px 10px;
+	border-left: 8px solid $color-primary;
+	font-weight: 600;
+
+	div {
+		display: flex;
+	}
+
+	p {
+		margin: 0 5px;
+		color: $color-primary;
+	}
+}
+
+.single:hover {
+	border-left: 8px solid $color-secondary;
+}
+
+.tags {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 10px;
+
+	p {
+		margin: 5px;
+		color: $color-primary;
+		font-weight: bold;
+		cursor: pointer;
+		padding: 2px;
+		border-radius: 5px;
+		background-color: var(--bgc);
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+}
+
+.filter {
+	color: var(--title);
+	font-size: 22px;
+	letter-spacing: 1px;
+	margin-left: 10px;
+}

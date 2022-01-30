@@ -1,0 +1,78 @@
+@import '_variables.scss';
+
+.article {
+	padding: 30px;
+
+	@media (max-width: 500px) {
+		padding: 15px;
+	}
+}
+
+.header {
+	.hasztag {
+		display: flex;
+
+		p {
+			color: $color-primary;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+	}
+
+	h2 {
+		color: var(--title);
+		font-size: 32px;
+		text-shadow: 0 0 1px white;
+		margin: 10px 0;
+	}
+
+	h3 {
+		color: gray;
+		font-size: 16px;
+	}
+}
+
+.content {
+	color: var(--p);
+	line-height: 30px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-align: justify;
+	margin-top: 40px;
+
+	@media (max-width: 500px) {
+		letter-spacing: 0px;
+		line-height: 30px;
+	}
+
+	p {
+		margin: 10px 0;
+	}
+
+	h3 {
+		color: var(--title);
+		font-size: 20px;
+		font-weight: bold;
+		box-shadow: 0 0.5px 0 gray;
+		text-shadow: 0 0 1px white;
+		padding: 5px 0;
+		margin-top: 20px;
+	}
+
+	a {
+		color: $color-primary;
+		font-weight: bold;
+	}
+
+	strong {
+		color: var(--bold);
+	}
+
+	img {
+		display: block;
+		margin: 20px auto;
+		width: 100%;
+		max-width: 500px;
+		border-radius: 10px;
+	}
+}

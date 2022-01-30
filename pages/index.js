@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import styles from '../styles/Home.module.scss';
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+const Home = () => {
+	return (
+		<>
+			<Head>
+				<title>Ninja List | Strona główna</title>
+			</Head>
+			<div>
+				<h1 className={styles.title}>Strona główna</h1>
+				<div className={styles.image}>
+					<Image width={600} height={400} src="/images/home_page.jpg" alt="home image" />
+				</div>
+				<p className={styles.text}>
+					Witam wszystkich na stronie poświęconej wędkarstwu feederowego. Jestem pasjonatem
+					wędkarstwa odkąd pamiętam i zawsze sprawiało mi to wiele satysfakcji. Kilka lat temu
+					postanowiłem uwieczniać swoje zdobycze i relacje z moich wypraw na instagramie, w tym celu
+					utworzyłem profil wędkarski na instagramie na który Cię serdecznie zapraszam. Hobbystyczne
+					prowadzenie instagrama przerosło moje oczekiwania, a zbyt długie stories, które większość
+					ludzi przeklikuje znikają w otłchani internetu i nigdzie nie można ich już znaleźć. Ciągła
+					chęć poszerzania wiedzy i poznawania nowych rzeczy, przerodziła się także w chęć dzielenia
+					się nowinkami i swoimi przemyśleniami z innymi.
+				</p>
+				<p className={styles.text}>
+					<b>
+						Masz jakieś pytanie? Śmiało, odwiedź{' '}
+						<a
+							href="https://www.instagram.com/tench_hunter/"
+							rel="noopener"
+							rel="noreferrer"
+							target="_blank">
+							instagram
+						</a>{' '}
+						lub napisz <a href="mailto:tomaszjarkowski1998@gmail.com">maila</a>✨
+					</b>
+				</p>
+				<Link href="/articles">
+					<a className={styles.btn}>Artykuły</a>
+				</Link>
+			</div>
+		</>
+	);
+};
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default Home;

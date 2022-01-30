@@ -1,0 +1,91 @@
+@import '_variables.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-light: #f1f1f1;
+	--color-dark: rgb(19, 20, 24);
+	--color-secondary: #32be8f;
+
+	--color-bold-light: rgb(44, 44, 44);
+	--color-bold-dark: white;
+
+	--color-light-secondary: #f9f9f9;
+	--color-dark-secondary: #333;
+
+	--color-title: #eaeaea;
+	--color-title-light: #27242c;
+
+	--color-p-light: #757579;
+	--color-p: #c7bebe;
+
+	--p: var(--color-p-light);
+	--p-dark: var(--color-p);
+
+	--bgc: var(--color-light-secondary);
+	--bgc-dark: var(--color-dark-secondary);
+
+	--title: var(--color-title-light);
+	--title-dark: var(--color-title);
+
+	--bold: var(--color-bold-light);
+	--bold-dark: var(--color-bold-dark);
+
+	--bg: var(--color-light);
+	--bg-dark: var(--color-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: var(--bg-dark);
+		--title: var(--color-title);
+		--p: var(--color-p);
+		--bgc: var(--bgc-dark);
+		--bold: var(--color-bold-dark);
+	}
+}
+
+[color-scheme='dark'] {
+	--bg: var(--bg-dark);
+	--title: var(--color-title);
+	--p: var(--color-p);
+	--bgc: var(--bgc-dark);
+	--bold: var(--color-bold-dark);
+}
+
+[color-scheme='light'] {
+	--bg: var(--color-light);
+	--title: var(--color-title-light);
+	--p: var(--color-p-light);
+	--bgc: var(--color-light-secondary);
+	--bold: var(--color-bold-light);
+}
+
+body {
+	background: var(--bg);
+	color: $title-color;
+	font-family: 'Nunito';
+}
+
+a {
+	color: var(--title);
+	text-decoration: none;
+}
+
+.content {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+footer {
+	display: block;
+	text-align: center;
+	padding: 30px 0;
+	margin-top: 40px;
+	color: var(--p);
+	border-top: 1px solid $title-color;
+}
