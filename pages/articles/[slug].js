@@ -26,7 +26,7 @@ const Details = ({ article }) => {
 	return (
 		<>
 			<Head>
-				<title>Ninja List | {article.title}</title>
+				<title>TenchHunter | {article.title}</title>
 			</Head>
 			<article className={styles.article}>
 				<header className={styles.header}>

@@ -18,7 +18,7 @@ const removeDuplicates = (data) => {
 	return data.filter((value, index) => data.indexOf(value) === index);
 };
 
-const Ninjas = ({ articles }) => {
+const Articles = ({ articles }) => {
 	const [articlesToDisplay, setArticles] = useState(articles);
 	const [filter, setFilter] = useState('wszystkie');
 	const tags = articles.map((article) => article.tags).flat(Infinity);
@@ -39,7 +39,7 @@ const Ninjas = ({ articles }) => {
 	return (
 		<>
 			<Head>
-				<title>Ninja List | Artykuły</title>
+				<title>TenchHunter | Artykuły</title>
 			</Head>
 			<div>
 				<h1 className={styles.title}>Artykuły</h1>
@@ -68,4 +68,4 @@ const Ninjas = ({ articles }) => {
 	);
 };
 
-export default Ninjas;
+export default Articles;
